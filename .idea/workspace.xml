@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d5810212-97a8-484c-97a6-ada6ebe2e04f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="SGL_beta.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -779,12 +779,12 @@
       <workItem from="1476597750245" duration="6340000" />
       <workItem from="1476604557686" duration="853000" />
       <workItem from="1476605646654" duration="482000" />
-      <workItem from="1476606185923" duration="5364000" />
+      <workItem from="1476606185923" duration="5482000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27906000" />
+    <option name="totallyTimeSpent" value="28024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1378" height="780" extended-state="0" />
