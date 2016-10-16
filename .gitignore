@@ -1,8 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
 target
-.idea
+#.idea
 SGL_beta-grailsPlugins.iml
 SGL_beta.iml
 test
 .slcache
 .slcache/.index
+.idea/workspace.xml
