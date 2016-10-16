@@ -6,15 +6,13 @@
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#create-estado" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
-		<div id="create-estado" class="content scaffold-create" role="main">
-			<h1><g:message code="default.create.label" args="[entityName]" /></h1>
+			<div class="nav center" role="navigation">
+				<a style="margin-right: 20px" href="#list-estado" class="right waves-effect waves-light btn" tabindex="-1"><g:message code="default.link.skip.label" default="Listar Estado"/></a>
+				<g:link style="margin-left: 20px" class="left waves-effect waves-light btn" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
+			</div><br><br><br>
+
+		<div id="create-estado" class="container" role="main">
+			<h4 class="center">Cadastrar Estado</h4>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 			</g:if>
@@ -30,7 +28,7 @@
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
+					<g:submitButton name="create" class="btn waves-effect waves-light" value="${message(code: 'default.button.create.label', default: 'Create')}" />
 				</fieldset>
 			</g:form>
 		</div>

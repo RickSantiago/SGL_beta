@@ -8,22 +8,20 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#list-estado" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
+    <div class="container">
+		<div class="nav center" role="navigation">
+				<a style="margin-right: 20px" href="#list-estado" class="right waves-effect waves-light btn" tabindex="-1"><g:message code="default.link.skip.label" default="Listar Estado"/></a>
+				<g:link style="margin-left: 20px" class="left waves-effect waves-light btn" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
+		</div><br><br><br>
+
 		<div id="list-estado" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<h4 class="center">Lista de Estados Cadastrados</h4>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<table>
+			<table class="highlight responsive-table bordered striped">
 			<thead>
 					<tr>
-					
 						<g:sortableColumn property="nome" title="${message(code: 'estado.nome.label', default: 'Nome')}" />
 					
 						<g:sortableColumn property="uf" title="${message(code: 'estado.uf.label', default: 'Uf')}" />
@@ -46,5 +44,6 @@
 				<g:paginate total="${estadoInstanceCount ?: 0}" />
 			</div>
 		</div>
+    </div>
 	</body>
 </html>
