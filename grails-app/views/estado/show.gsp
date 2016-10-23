@@ -8,9 +8,9 @@
 		<title><g:message code="default.show.label" args="[entityName]" /></title>
 	</head>
 	<body>
+    <div class="container">
 	<div class="nav center" role="navigation">
-		<a style="margin-right: 20px" href="#list-estado" class="right waves-effect waves-light btn" tabindex="-1"><g:message code="default.link.skip.label" default="Listar Estado"/></a>
-		<g:link style="margin-left: 20px" class="left waves-effect waves-light btn" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
+		<g:link style="margin-left: 20px" class="left waves-effect waves-light btn " action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
 	</div><br><br><br>
 
 		<div id="show-estado" class="container" role="main">
@@ -21,10 +21,10 @@
 			<ul class="collection">
 				<g:if test="${estadoInstance?.cidade}">
 				<li class="collection-item">
-					<span id="cidade-label" class="property-label"><g:message code="estado.cidade.label" default="Cidade" /></span>
-					
+					<span id="cidade-label" class="property-label"><g:message code="estado.cidade.label" default="Cidades: " /></span>
 						<g:each in="${estadoInstance.cidade}" var="c">
-						<span class="property-value" aria-labelledby="cidade-label"><g:link controller="cidade" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></span>
+						<h7 class="property-value" aria-labelledby="cidade-label">
+                            <g:link controller="cidade" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></h7>
 						</g:each>
 					
 				</li>
@@ -56,5 +56,6 @@
 				</fieldset>
 			</g:form>
 		</div>
+    </div>
 	</body>
 </html>

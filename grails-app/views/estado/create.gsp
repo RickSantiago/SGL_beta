@@ -6,8 +6,8 @@
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
 	<body>
+    <div class="section">
 			<div class="nav center" role="navigation">
-				<a style="margin-right: 20px" href="#list-estado" class="right waves-effect waves-light btn" tabindex="-1"><g:message code="default.link.skip.label" default="Listar Estado"/></a>
 				<g:link style="margin-left: 20px" class="left waves-effect waves-light btn" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
 			</div><br><br><br>
 
@@ -32,5 +32,6 @@
 				</fieldset>
 			</g:form>
 		</div>
+    </div>
 	</body>
 </html>

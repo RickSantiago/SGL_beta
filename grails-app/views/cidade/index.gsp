@@ -8,22 +8,19 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#list-cidade" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
+    <div class="container">
+		<div class="nav center" role="navigation">
+				<g:link style="margin-left: 20px" class="left waves-effect waves-light btn green" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
+		</div><br><br><br>
+
 		<div id="list-cidade" class="content scaffold-list" role="main">
-			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
+			<h4 class="center"><g:message code="default.list.label" args="[entityName]" /></h4>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
 			</g:if>
-			<table>
+			<table  class="highlight responsive-table bordered striped">
 			<thead>
 					<tr>
-					
 						<th><g:message code="cidade.estado.label" default="Estado" /></th>
 					
 						<g:sortableColumn property="nome" title="${message(code: 'cidade.nome.label', default: 'Nome')}" />
@@ -37,7 +34,6 @@
 						<td><g:link action="show" id="${cidadeInstance.id}">${fieldValue(bean: cidadeInstance, field: "estado")}</g:link></td>
 					
 						<td>${fieldValue(bean: cidadeInstance, field: "nome")}</td>
-					
 					</tr>
 				</g:each>
 				</tbody>
@@ -46,5 +42,6 @@
 				<g:paginate total="${cidadeInstanceCount ?: 0}" />
 			</div>
 		</div>
+	</div>
 	</body>
 </html>

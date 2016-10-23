@@ -18,30 +18,50 @@
 </head>
 <body>
 <ul id="dropdownCadastro" class="dropdown-content">
-    <li><a href="#!">Pessoa</a></li>
-    <li><a href="#!">Pagamento</a></li>
+    <li><g:link controller="Pessoa" action="create">Pessoa</g:link></li>
+    <li class="divider"></li>
+    <li><g:link controller="Pagamento" action="create">Pagamento</g:link></li>
     <li class="divider"></li>
     <li class="divider"></li>
-    <li><a href="#!">Plano</a></li>
-    <li><a href="#!">Tipo do Plano</a></li>
     <li class="divider"></li>
     <li class="divider"></li>
-    <li><a href="#!">Cidade</a></li>
-    <li><a href="#!">Estado</a></li>
+    <li class="divider"></li>
+    <li><g:link controller="Plano" action="create">Plano</g:link></li>
+    <li class="divider"></li>
+    <li><g:link controller="TipoPlano" action="create">Tipo de Plano</g:link></li>
+    <li class="divider"></li>
+    <li class="divider"></li>
+    <li class="divider"></li>
+    <li class="divider"></li>
+    <li class="divider"></li>
+    <li><g:link controller="Cidade" action="create">Cidade</g:link></li>
+    <li class="divider"></li>
+    <li><g:link controller="Estado" action="create">Estado</g:link></li>
 </ul>
 <ul id="dropdownListar" class="dropdown-content">
-    <li><a href="#!">Listar Pessoas</a></li>
-    <li><a href="#!">Listar Pagamentos</a></li>
+    <li><g:link controller="Pessoa" action="index">Clientes cadastrados</g:link></li>
+    <li class="divider"></li>
+    <li><g:link controller="Pagamento" action="index">Pagamentos Registrados</g:link></li>
     <li class="divider"></li>
     <li class="divider"></li>
-    <li><a href="#!">Listar Planos</a></li>
-    <li><a href="#!">Listar Tipos de Planos</a></li>
     <li class="divider"></li>
     <li class="divider"></li>
-    <li><a href="#!">Listar Cidades</a></li>
-    <li><a href="#!">Listar Estados</a></li>
+    <li class="divider"></li>
+    <li class="divider"></li>
+    <li><g:link controller="Plano" action="index">Mostrar Planos</g:link></li>
+    <li class="divider"></li>
+    <li><g:link controller="TipoPlano" action="index">Tipos de Planos Cadastrados</g:link></li>
+    <li class="divider"></li>
+    <li class="divider"></li>
+    <li class="divider"></li>
+    <li class="divider"></li>
+    <li class="divider"></li>
+    <li class="divider"></li>
+    <li><g:link controller="Cidade" action="index">Cidades Cadastradas</g:link></li>
+    <li class="divider"></li>
+    <li><g:link controller="Estado" action="index">Estados Cadastrados</g:link></li>
 </ul>
-<nav class="light-blue 500" role="navigation" style="margin-top: 5px">
+<nav class="cyan 700" role="navigation" style="margin-top: 5px">
     <div class="nav-wrapper container">
         <ul class="left hide-on-med-and-down">
            <li><a id="logo-container" href="${createLink(uri: '/')}" class="brand-logo left"><img class="logo" src="${resource(dir: 'img', file: 'eservice_business-applications-icon.png')}" width="60" alt="logotipo da empresa" /></a></li>
@@ -56,7 +76,7 @@
 </nav><br>
 
 <g:layoutBody/>
-<footer class="page-footer ">
+<footer class="page-footer cyan 700 ">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
@@ -74,7 +94,7 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            © 2016 Todos os direitos reservados
+            © 2016 Todos os direitos reservados - Criado Por: Ricardo Santiago Morais.
         </div>
     </div>
 </footer>

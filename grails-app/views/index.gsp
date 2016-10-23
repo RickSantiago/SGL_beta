@@ -6,24 +6,14 @@
 </head>
 <br>
 <br id="page-body" role="main">
-    <h1 class="center">SGL#Beta</h1>
+    <h2 class="center">SGL#Beta</h2>
     <h4 class="center">Sistema de Gerenciamento e Levantamento</h4>
-    </br></br>
-
-    <div id="controller-list" role="navigation">
-    <blockquote>
-         <h5>
-             Selecione o controlador para acessar suas funções.
-         </h5>
- </blockquote>
- <blockquote>
-        <ul class="collection">
-            <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.name } }">
-                <li class="controller; collection-item"><g:link controller="${c.logicalPropertyName}">${c.name}</g:link></li>
-            </g:each>
-        </ul>
-         </blockquote>
+    <div class="section" id="controller-list" role="navigation">
+        <blockquote>
+            <h5 class="center">O SGL é um sistema para auxilar, o gerenciamento e buscas de alguns dados especificos de uma empresa,<br>
+            o nosso intuito é agilizar o otimizar o tempo quando se precisa fazer o levantamendo de uma organização.</h5>
+        </blockquote>
     </div>
 </div>
-</body>
+</body><br>
 </html>

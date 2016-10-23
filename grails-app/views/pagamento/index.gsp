@@ -8,13 +8,12 @@
 		<title><g:message code="default.list.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#list-pagamento" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
+            <div class="nav" role="navigation">
+                %{--<ul>--}%
+                    %{--<a href="#list-pagamento" style="margin-right: 20px" class="left waves-effect waves-light btn" tabindex="-1"><g:message code="default.link.skip.label" default="Voltar"/></a>--}%
+                    %{--<li><g:link style="margin-left: 20px" class="left waves-effect waves-light btn" action="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>--}%
+                %{--</ul>--}%
+            </div><br><br><br>
 		<div id="list-pagamento" class="content scaffold-list" role="main">
 			<h1><g:message code="default.list.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
