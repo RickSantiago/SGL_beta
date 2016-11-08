@@ -61,7 +61,7 @@ grails.project.dependency.resolution = {
         // plugins for the compile step
         compile ":scaffolding:2.1.2"
         compile ':cache:1.1.8'
-//        compile ":export:1.5"
+//        compile ":export:1.5.0"
         // asset-pipeline 2.0+ requires Java 7, use version 1.9.x with Java 6
         compile ":asset-pipeline:2.5.7"
 //        compile ":spring-security-core:2.0-RC4"

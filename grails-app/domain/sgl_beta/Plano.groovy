@@ -1,21 +1,24 @@
 package sgl_beta
 
+import org.grails.databinding.BindingFormat
+
 class Plano {
 
-    Date dataInicio
     String codigoPlano
-    Float valorPlanoMensal
-    Float valorPlanoAnual
+    Double valorPlanoMensal
+    Double valorPlanoAnual
     TipoPlano tpPlano
+    @BindingFormat('dd/MM/yyyy')
+    Date dataInicio
 
     static hasMany = [pessoa:Pessoa]
 
     static belongsTo = [TipoPlano]
 
     static constraints = {
-        valorPlanoMensal min: new Float(1.0f)
-        valorPlanoAnual min: new Float(1.0f)
         codigoPlano nullable: false, blank: false
+        valorPlanoAnual scale: 2, min: new Double(1.0)
+        valorPlanoMensal scale: 2, min: new Double(1.0)
     }
 
     static mapping = {

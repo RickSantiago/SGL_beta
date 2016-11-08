@@ -1,5 +1,7 @@
 package sgl_beta
 
+import org.grails.databinding.BindingFormat
+
 class Pessoa {
 
     String nome
@@ -7,13 +9,13 @@ class Pessoa {
     String rg
     String email
     String telefone
-    Date dataNascimento
     String logradouro
     String bairro
     String complemento
     Integer numero
-
     Plano plano
+    @BindingFormat('dd/MM/yyyy')
+    Date dataNascimento
 
     static hasMany = [pagamento:Pagamento]
 

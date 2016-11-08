@@ -11,6 +11,7 @@
     <div class="container">
 	<div class="nav center" role="navigation">
 		<g:link style="margin-left: 20px" class="left waves-effect waves-light btn " action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
+		<g:link style="margin-left: 20px" class="left waves-effect waves-light btn " action="index">Ver todos os Estados</g:link>
 	</div><br><br><br>
 
 		<div id="show-estado" class="container" role="main">
@@ -21,7 +22,7 @@
 			<ul class="collection">
 				<g:if test="${estadoInstance?.cidade}">
 				<li class="collection-item">
-					<span id="cidade-label" class="property-label"><g:message code="estado.cidade.label" default="Cidades: " /></span>
+					<h6 id="cidade-label" class="property-label"><g:message code="estado.cidade.label" default="Cidades: " /></h6>
 						<g:each in="${estadoInstance.cidade}" var="c">
 						<h7 class="property-value" aria-labelledby="cidade-label">
                             <g:link controller="cidade" action="show" id="${c.id}">${c?.encodeAsHTML()}</g:link></h7>

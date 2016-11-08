@@ -7,15 +7,14 @@
 		<title><g:message code="default.edit.label" args="[entityName]" /></title>
 	</head>
 	<body>
-		<a href="#edit-cidade" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-		<div class="nav" role="navigation">
-			<ul>
-				<li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-				<li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
-				<li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
-			</ul>
-		</div>
-		<div id="edit-cidade" class="content scaffold-edit" role="main">
+	<div class="section">
+		<div class="nav center" role="navigation">
+			<g:link style="margin-left: 210px" class="left waves-effect waves-light btn blue-grey"
+					action="index">Listar Cidades</g:link>
+			<g:link style="margin-left: 20px" class="left waves-effect waves-light btn green"
+					action="create">Criar nova Cidade</g:link>
+		</div><br><br><br>
+		<div id="edit-cidade" class="container" role="main">
 			<h1><g:message code="default.edit.label" args="[entityName]" /></h1>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
@@ -33,9 +32,10 @@
 					<g:render template="form"/>
 				</fieldset>
 				<fieldset class="buttons">
-					<g:actionSubmit class="save" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+					<g:actionSubmit class="waves-effect waves-light btn orange" action="update" value="${message(code: 'default.button.update.label', default: 'Update')}" />
 				</fieldset>
 			</g:form>
+		</div>
 		</div>
 	</body>
 </html>

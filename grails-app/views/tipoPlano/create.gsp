@@ -6,12 +6,12 @@
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
 	</head>
 	<body>
-	<div class="container">
+	<div class="section">
 		<div class="nav center" role="navigation">
 			<g:link style="margin-left: 20px" class="left waves-effect waves-light btn blue-grey" action="index">Listar Tipos de Planos</g:link>
 		</div><br><br><br>
 
-		<div id="create-tipoPlano" class="content scaffold-create" role="main">
+		<div id="create-tipoPlano" class="container" role="main">
 			<h4 class="center"><g:message code="default.create.label" args="[entityName]" /></h4>
 			<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>

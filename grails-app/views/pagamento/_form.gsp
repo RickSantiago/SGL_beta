@@ -1,13 +1,11 @@
 <%@ page import="sgl_beta.Pagamento" %>
 
-
-
 <div class="fieldcontain ${hasErrors(bean: pagamentoInstance, field: 'dataPagamento', 'error')} required">
 	<label for="dataPagamento">
 		<g:message code="pagamento.dataPagamento.label" default="Data Pagamento" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="dataPagamento" precision="day"  value="${pagamentoInstance?.dataPagamento}"  />
+	<input placeholder="dd/mm/aaaa" type="text" class="datepicker" name="dataPagamento" onkeyup="mascaraData(this.value,this)"  value="${formatDate(format:'dd/MM/yyyy', date:pagamentoInstance?.dataPagamento)}"  />
 
 </div>
 
@@ -16,7 +14,7 @@
 		<g:message code="pagamento.dataVencimento.label" default="Data Vencimento" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:datePicker name="dataVencimento" precision="day"  value="${pagamentoInstance?.dataVencimento}"  />
+	<input placeholder="dd/mm/aaaa" type="text" class="datepicker" name="dataVencimento" onkeyup="mascaraData(this.value,this)"   value="${formatDate(format:'dd/MM/yyyy', date:pagamentoInstance?.dataVencimento)}"  />
 
 </div>
 
@@ -25,7 +23,7 @@
 		<g:message code="pagamento.valorPago.label" default="Valor Pago" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:field name="valorPago" value="${fieldValue(bean: pagamentoInstance, field: 'valorPago')}" required=""/>
+	<input type="text" name="valorPago" value="${fieldValue(bean: pagamentoInstance, field: 'valorPago')}" required=""/>
 
 </div>
 
@@ -34,7 +32,24 @@
 		<g:message code="pagamento.pessoa.label" default="Pessoa" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:select id="pessoa" name="pessoa.id" from="${sgl_beta.Pessoa.listOrderByNome()}" optionKey="id" required="" value="${pagamentoInstance?.pessoa?.id}" class="many-to-one"/>
+	<g:select style="display: block;" id="pessoa" name="pessoa.id" from="${sgl_beta.Pessoa.listOrderByNome()}" optionKey="id" required="" value="${pagamentoInstance?.pessoa?.id}" class="many-to-one"/>
 
 </div>
 
+<script type="text/javascript">
+
+	function mascaraData(Data, campo) {
+		var data = '';
+		data = data + Data;
+		if (data.length == 2) {
+			data = data + '/';
+			campo.value = data;
+		}
+		if (data.length == 5) {
+			data = data + '/';
+			campo.value = data;
+		}
+
+	}
+
+</script>

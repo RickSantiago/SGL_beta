@@ -61,22 +61,22 @@
     <li class="divider"></li>
     <li><g:link controller="Estado" action="index">Estados Cadastrados</g:link></li>
 </ul>
-<nav class="cyan 700" role="navigation" style="margin-top: 5px">
+<nav class="blue-grey" role="navigation" style="margin-top: 5px">
     <div class="nav-wrapper container">
         <ul class="left hide-on-med-and-down">
-           <li><a id="logo-container" href="${createLink(uri: '/')}" class="brand-logo left"><img class="logo" src="${resource(dir: 'img', file: 'eservice_business-applications-icon.png')}" width="60" alt="logotipo da empresa" /></a></li>
+           <li><a id="logo-container" href="${createLink(uri: '/')}" class="brand-logo left">Inicio <img class="logo" src="${resource(dir: 'img', file: 'lighting.png')}" width="40" alt="logotipo da empresa" /></a></li>
         </ul>
         <ul class="right hide-on-med-and-down">
-            <li><a class="dropdown-button" href="#!" data-activates="dropdownCadastro">Cadastro<i class="material-icons right">arrow_drop_down</i></a></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdownCadastro">Cadastro</a></li>
             <!-- Dropdown Trigger -->
-            <li><a class="dropdown-button" href="#!" data-activates="dropdownListar">Listar<i class="material-icons right">arrow_drop_down</i></a></li>
-            <li><a href="#contate_nos" class="active">Buscar</a><i class="material-icons left">search</i></li>
+            <li><a class="dropdown-button" href="#!" data-activates="dropdownListar">Listar</a></li>
+            <li><a href="#contate_nos" class="active">Buscar</a></li>
         </ul>
     </div>
 </nav><br>
 
 <g:layoutBody/>
-<footer class="page-footer cyan 700 ">
+<footer class="page-footer blue-grey ">
     <div class="container">
         <div class="row">
             <div class="col l6 s12">

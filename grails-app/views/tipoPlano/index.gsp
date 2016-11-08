@@ -9,10 +9,11 @@
 	</head>
 	<body>
 	<div class="container">
+	<div class="section">
 		<div class="nav center" role="navigation">
-			<g:link style="margin-left: 20px" class="left waves-effect waves-light btn green" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
+			<g:link style="margin-left: 150px" class="left waves-effect waves-light btn green" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link>
 		</div><br><br><br>
-		<div id="list-tipoPlano" class="content scaffold-list" role="main">
+		<div id="list-tipoPlano" role="main">
 			<h4><g:message code="default.list.label" args="[entityName]" /></h4>
 			<g:if test="${flash.message}">
 				<div class="message" role="status">${flash.message}</div>
@@ -43,6 +44,7 @@
 				<g:paginate total="${tipoPlanoInstanceCount ?: 0}" />
 			</div>
 		</div>
+        </div>
 		</div>
 	</body>
 </html>
