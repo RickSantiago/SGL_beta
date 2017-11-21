@@ -18,7 +18,7 @@ environments {
             dbCreate ="update" // one of 'create', 'create-drop', 'update', 'validate', ''
             url = "jdbc:mysql://localhost/sgl_beta"
             username = "root"
-            password = "16019377"
+            password = "********"
         }
     }
     test {
@@ -26,7 +26,7 @@ environments {
             dbCreate = "update"
             url = "jdbc:mysql://localhost/sgl_beta"
             username = "root"
-            password = "16019377"
+            password = "*******"
         }
     }
     production {
@@ -34,7 +34,7 @@ environments {
             dbCreate = "update"
             url = "jdbc:mysql://localhost/sgl_beta"
             username = "root"
-            password = "16019377"
+            password = "*******"
         }
     }
 }
